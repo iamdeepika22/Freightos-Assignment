@@ -19,10 +19,6 @@ const CharacterPage = () => {
         return () => clearTimeout(timer);
     }, [name]);
 
-    useEffect(() => {
-        fetchCharacters();
-    }, [page, debouncedName, status]);
-
     const fetchCharacters = async () => {
         try {
             setLoading(true);
@@ -43,6 +39,10 @@ const CharacterPage = () => {
             setLoading(false);
         }
     };
+    
+    useEffect(() => {
+        fetchCharacters();
+    }, [page, debouncedName, status]);
 
     return (
         <div className="page-wrapper">
