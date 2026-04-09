@@ -8,13 +8,13 @@ const CharacterPage = lazy(() => import("./pages/CharacterPage"));
 const App = () => {
   return (
     <BrowserRouter>
-    <Router>
-      <Suspense fallback={<h2>Loading...</h2>}>
-        <Routes>
-          <Route path="/" element={<CharacterPage />} />
-        </Routes>
-      </Suspense>
-    </Router>
+      <Router>
+        <Suspense fallback={<h2>Loading...</h2>}>
+          <Routes>
+            <Route path="/" element={<CharacterPage />} />
+          </Routes>
+        </Suspense>
+      </Router>
     </BrowserRouter>
   );
 }
